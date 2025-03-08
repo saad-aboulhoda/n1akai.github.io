@@ -24,16 +24,25 @@ export function projects() {
        */
       let currentIndex = 0;
       const image = select(".images-wrapper img");
+
       const imageObservable = createObservable();
       const unsubscribeImage = imageObservable.subscribe((index) => {
-        // Remove active from all dots
-        selectAll("#dots span").forEach((element) =>
-          element.classList.remove("active")
-        );
-        // then
-        select(`#dot-${currentIndex}`).classList.add("active");
+        select(".images-wrapper .loading").classList.add("active");
+
+        const handleLoading = () => {
+          // Remove active from all dots
+          selectAll("#dots span").forEach((element) =>
+            element.classList.remove("active")
+          );
+          // then
+          select(`#dot-${currentIndex}`).classList.add("active");
+          select(".images-wrapper .loading").classList.remove("active");
+          image.removeEventListener("load", handleLoading);
+        };
 
         image.src = project.imgs[index];
+
+        image.addEventListener("load", handleLoading);
       });
 
       select("#slider-prev").addEventListener("click", () => {
@@ -125,6 +134,7 @@ function renderDetails(detail) {
       </div>
       <div class="details">
         <div class="images-wrapper">
+        <div class="loading"><i class="fa-solid fa-spinner fa-spin-pulse fa-2xl"></i></div>
           <img  src="${detail.imgs[0]}" />
           <div id="expand">
             <i class="fa-solid fa-expand"></i>

@@ -939,6 +939,27 @@ div#messagesContainer .message.slide-out {
   background-color: black;
 }
 
+.project-details .container .content .details .images-wrapper .loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.15s;
+  opacity: 0;
+  border-radius: 50%;
+  color: white;
+}
+
+.project-details .container .content .details .images-wrapper .loading.active {
+  opacity: 1;
+}
+
 .project-details .container .content .details .images-wrapper img {
   width: 100%;
   height: auto;
