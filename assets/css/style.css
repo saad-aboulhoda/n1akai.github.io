@@ -58,6 +58,10 @@ body {
   background-color: var(--bg-body);
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   color: unset;
   text-decoration: unset;
@@ -207,10 +211,7 @@ article .article-title::before {
   background-color: var(--bg-primary);
   border-radius: 8px;
   overflow: hidden;
-}
-
-.card > .card-img {
-  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 .card > .card-body {
@@ -222,6 +223,7 @@ article .article-title::before {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-bottom: 1px solid rgb(0 0 0 / 0.1);
 }
 
 .card .card-title {
@@ -598,8 +600,8 @@ section#about article {
 /* Projects Section: Start */
 
 section#projects .cards-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(372px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
 }
 
@@ -607,14 +609,21 @@ section#projects .cards-wrapper .card {
   margin-bottom: 20px;
 }
 
+@media (min-width: 768px) {
+  section#projects .cards-wrapper .card {
+    width: calc(50% - 12px);
+  }
+}
+
 section#projects .badges-wrapper {
   display: flex;
+  flex-wrap: wrap;
   margin: 8px -4px;
   width: calc(100% + 4px);
 }
 
 section#projects .badges-wrapper > .badge {
-  margin: 0 4px;
+  margin: 4px 4px;
 }
 
 /* Projects Section: End */
@@ -801,3 +810,383 @@ div#messagesContainer .message.slide-out {
   }
 }
 /* Messages Container: End */
+
+/* Project Details: Start */
+
+#projects .card [more-details-target] {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+#projects .card [more-details-target]::after {
+  content: "";
+  opacity: 0;
+  color: var(--text-primary-color-inverse);
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  transition: 0.3s;
+}
+
+#projects .card [more-details-target]:hover::after {
+  opacity: 1;
+}
+
+#projects .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#projects .card [more-details-target] img {
+  transition: 0.3s;
+}
+
+#projects .card [more-details-target]:hover img {
+  scale: 1.1;
+}
+
+.project-details {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-details.active {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+}
+
+.project-details .overlay {
+  background-color: var(--overlay-background);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: 0.15s;
+}
+
+.project-details.active .overlay {
+  opacity: 1;
+}
+
+.project-details .container {
+  z-index: 999;
+  transform: translateY(-100%);
+  height: 100%;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  transition: 0.15s;
+}
+
+.project-details.active .container {
+  transform: translateY(0);
+}
+
+.project-details .container .content {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-details .container .content .close {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .project-details .container .content .close {
+    color: black;
+  }
+}
+
+.project-details .container .content .details {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.project-details .container .content .details .images-wrapper {
+  width: 100%;
+  height: 50%;
+  transition: 0.15s;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.project-details .container .content .details .images-wrapper img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  max-height: 100%;
+}
+
+.project-details .container .content .details .images-wrapper.expand {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .project-details .container .content .details .images-wrapper.expand {
+    width: 100%;
+  }
+}
+
+#expand,
+#minimize {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#expand.active,
+#minimize.active {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .project-details .container .content .details .images-wrapper {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.project-details .container .content .details .info {
+  width: 100%;
+  height: 50%;
+  padding: 2rem 1rem;
+  overflow-y: auto;
+}
+
+@media (min-width: 768px) {
+  .project-details .container .content .details .info {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+#slider-prev,
+#slider-next {
+  font-size: 13px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#slider-prev {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#slider-next {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.project-details #dots {
+  display: flex;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.8rem 1.5rem;
+  border-radius: 4px;
+  transform: translateX(-50%);
+}
+
+.project-details #dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 3px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.project-details #dots span.active {
+  background-color: white;
+}
+
+.project-details .container .content .details .info .title {
+  text-align: center;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.project-details .container .content .details .info .date {
+  text-align: center;
+  color: var(--text-secondary-color);
+}
+
+.project-details .container .content .details .info .technologies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.project-details .container .content .details .info .technologies .tech {
+  padding: 12px 8px;
+  width: calc((100% - 8px) / 2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  color: black;
+  font-size: 19px;
+  background-color: #f9f9f9;
+}
+
+@media (min-width: 1280px) {
+  .project-details .container .content .details .info .technologies .tech {
+    width: calc((100% - 8px) / 3);
+  }
+}
+
+.project-details .container .content .details .info .link {
+  display: flex;
+  gap: 4px;
+}
+
+.project-details .container .content .details .info .link a {
+  color: var(--primary);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 8px;
+  border-radius: 4px;
+  display: block;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.project-details .container .content .details .info .link a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+#projects p.stay-tunned {
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+/* Project Details: End */
+
+/* MVVM Architecture Icon */
+.custom-icons.mvvm-icon {
+  position: relative;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background-color: #3498db;
+  border-radius: 3px;
+  overflow: hidden;
+  vertical-align: middle; /* Aligns the icon with surrounding text */
+  margin: 0 2px; /* Optional: adds a small space on either side */
+  line-height: normal; /* Ensures consistent alignment */
+}
+
+.custom-icons.mvvm-icon::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 13px;
+  height: 13px;
+  border: 1px solid white;
+  border-radius: 1px;
+  box-sizing: border-box;
+}
+
+.custom-icons.mvvm-icon::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: white;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 40%, 60% 40%, 60% 100%, 0% 100%);
+}
+
+/* Hilt Android Dependency Injection Icon */
+.custom-icons.hilt-icon {
+  position: relative;
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background-color: #3ddc84; /* Android green color */
+  border-radius: 3px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin: 0 2px;
+  line-height: normal;
+}
+
+/* Android robot head shape (simplified) */
+.custom-icons.hilt-icon::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  width: 11px;
+  height: 6px;
+  background-color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Android robot body + injection syringe */
+.custom-icons.hilt-icon::after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 4px;
+  width: 6px;
+  height: 7px;
+  background-color: white;
+  border-radius: 0 0 3px 3px;
+  box-shadow: 7px -3px 0 -2px white, /* Syringe body */ 12px -3px 0 -3px white; /* Syringe tip */
+}
+
+/* Small detail for syringe plunger */
+.custom-icons.hilt-icon > i {
+  content: "";
+  position: absolute;
+  right: 3px;
+  top: 6px;
+  width: 2px;
+  height: 2px;
+  background-color: white;
+  border-radius: 1px;
+}

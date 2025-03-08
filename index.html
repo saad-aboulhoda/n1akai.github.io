@@ -1,320 +1,332 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Hey, this is my porfolio, here you can see all my personal projects, and feel free to contact us if you want some help in a project."
+    />
+    <meta
+      name="keywords"
+      content="Web, Web Development, Mobile Development, Software Developer, Front-End Developer, Back-End Developer"
+    />
+    <title>ABOULHODA</title>
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <!-- FontAwesome Style -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Dev Icons Style -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <!-- Main Style -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Utilities Style -->
+    <link rel="stylesheet" href="./assets/css/utilities.css" />
+    <!-- index.js -->
+    <script type="module" src="./assets/js/index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ABOULHODA</title>
-  <!-- FontAwesome Style -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Dev Icons Style -->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <!-- Main Style -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <!-- Utilities Style -->
-  <link rel="stylesheet" href="./assets/css/utilities.css" />
-  <!-- Main Script -->
-  <script defer src="./assets/js/script.js"></script>
-</head>
-
-<body>
-  <!-- Header: Start -->
-  <header>
-    <div class="container">
-      <h1>ABOULHODA</h1>
-      <nav id="menu" class="slide" toggle-style="slide-in">
-        <div toggle-target="#menu" id="close"><i class="fa-solid fa-xmark"></i></div>
-        <a toggle-target="#menu" href="#hero">Home</a>
-        <a toggle-target="#menu" href="#about">About</a>
-        <a toggle-target="#menu" href="#projects">Projects</a>
-        <a toggle-target="#menu" href="#contact">Contact</a>
-      </nav>
-      <button toggle-target="#menu" class="btn btn-icon btn-primary mobile-navigation-toggle" type="button">
-        <i class="fa-solid fa-bars"></i>
-      </button>
-    </div>
-  </header>
-  <!-- Header: End -->
-
-  <!-- Mobile Navigation: Start -->
-  <!-- Mobile Navigation: End -->
-
-  <main>
-    <!-- Hero Section: Start -->
-    <section id="hero">
-      <article>
-        <p class="hi-message">Hey, I'm Saad Aboulhoda</p>
-        <p class="main-message">
-          I <span>Develop</span> Web & Mobile <br />
-          Applications
-        </p>
-        <a href="#contact" class="btn btn-lg btn-primary">Contact Me</a>
-      </article>
-    </section>
-    <!-- Hero Section: End -->
-
-    <!-- About Section: Start -->
-    <section id="about">
-      <h3 class="section-title text-white">About me</h3>
+  <body>
+    <!-- Header: Start -->
+    <header>
       <div class="container">
-        <div class="about-wrapper">
-          <div class="img-wrapper">
-            <img src="/assets/images/phone.svg" />
+        <h1>ABOULHODA</h1>
+        <nav id="menu" class="slide" toggle-style="slide-in">
+          <div toggle-target="#menu" id="close">
+            <i class="fa-solid fa-xmark"></i>
           </div>
-          <article>
-            <h4 class="article-title">Who Am I</h4>
-            <p class="about-me">
-              My name is <strong>Saad ABOULHODA</strong>,<br />
-              I'm a <strong>Software Developer</strong>, I specialize in both
-              web and mobile development. For web development, I use
-              TypeScript for both front-end and back-end, working with
-              frameworks such as <strong>Angular</strong> and
-              <strong>Vue</strong>, or even
-              <strong>Vanilla JavaScript</strong> for front-end. On the
-              back-end, I utilize <strong>NestJS</strong> or pure
-              <strong>Node.js</strong>. Additionally, I can develop full-stack
-              web applications using <strong>Laravel</strong>.
-              <br />
-              <br />
-              In mobile development, I create native android apps with
-              <strong>Java</strong> or <strong>Kotlin</strong> and
-              cross-platform apps using <strong>Flutter</strong> To enhance
-              productivity and focus on the front-end, I leverage BaaS
-              (Backend-as-a-Service) solutions like <strong>Firebase</strong>,
-              <strong>Supabase</strong>, and <strong>Appwrite</strong>.
-            </p>
-          </article>
+          <a toggle-target="#menu" href="#hero">Home</a>
+          <a toggle-target="#menu" href="#about">About</a>
+          <a toggle-target="#menu" href="#projects">Projects</a>
+          <a toggle-target="#menu" href="#contact">Contact</a>
+        </nav>
+        <button
+          toggle-target="#menu"
+          class="btn btn-icon btn-primary mobile-navigation-toggle"
+          type="button"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <!-- Header: End -->
+
+    <!-- Mobile Navigation: Start -->
+    <!-- Mobile Navigation: End -->
+
+    <main>
+      <!-- Hero Section: Start -->
+      <section id="hero">
+        <article>
+          <p class="hi-message">Hey, I'm Saad Aboulhoda</p>
+          <p class="main-message">
+            I <span>Develop</span> Web & Mobile <br />
+            Applications
+          </p>
+          <a href="#contact" class="btn btn-lg btn-primary">Contact Me</a>
+        </article>
+      </section>
+      <!-- Hero Section: End -->
+
+      <!-- About Section: Start -->
+      <section id="about">
+        <h3 class="section-title text-white">About me</h3>
+        <div class="container">
+          <div class="about-wrapper">
+            <div class="img-wrapper">
+              <img src="/assets/images/phone.svg" />
+            </div>
+            <article>
+              <h4 class="article-title">Who Am I</h4>
+              <p class="about-me">
+                My name is <strong>Saad ABOULHODA</strong>,<br />
+                I'm a <strong>Software Developer</strong>, I specialize in both
+                web and mobile development. For web development, I use
+                TypeScript for both front-end and back-end, working with
+                frameworks such as <strong>Angular</strong> and
+                <strong>Vue</strong>, or even
+                <strong>Vanilla JavaScript</strong> for front-end. On the
+                back-end, I utilize <strong>Spring</strong> or
+                <strong>NestJS</strong>. Additionally, I can develop full-stack
+                web applications using <strong>Laravel</strong>.
+                <br />
+                <br />
+                In mobile development, I create native android apps with
+                <strong>Java</strong> or <strong>Kotlin</strong> and
+                cross-platform apps using <strong>Flutter</strong> To enhance
+                productivity and focus on the front-end, I leverage BaaS
+                (Backend-as-a-Service) solutions like <strong>Firebase</strong>,
+                <strong>Supabase</strong>, and <strong>Appwrite</strong>.
+              </p>
+            </article>
+          </div>
+          <div class="skills-wrapper">
+            <article>
+              <h4 class="article-title">Technologies I'm familiar with</h4>
+              <ul class="skills">
+                <li class="tooltip" tooltip="Java">
+                  <i class="devicon-java-plain-wordmark colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Kotlin">
+                  <i class="devicon-kotlin-plain colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Javascript">
+                  <i class="devicon-javascript-plain colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Typescript">
+                  <i class="devicon-typescript-plain colored"></i>
+                </li>
+                <li class="tooltip" tooltip="php">
+                  <i class="devicon-php-plain colored"></i>
+                </li>
+                <li class="tooltip" tooltip="HTML">
+                  <i class="devicon-html5-plain-wordmark colored"></i>
+                </li>
+                <li class="tooltip" tooltip="CSS">
+                  <i class="devicon-css3-plain-wordmark colored"></i>
+                </li>
+                <li class="tooltip" tooltip="TailwindCSS">
+                  <i class="devicon-tailwindcss-original colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Angular">
+                  <i class="devicon-angular-plain colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Vue.js">
+                  <i class="devicon-vuejs-plain colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Spring">
+                  <i class="devicon-spring-original"></i>
+                </li>
+                <li class="tooltip" tooltip="Node.js">
+                  <i class="devicon-nodejs-plain-wordmark colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Nest.js">
+                  <i class="devicon-nestjs-original colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Socket.io">
+                  <i class="devicon-socketio-original"></i>
+                </li>
+                <li class="tooltip" tooltip="Laravel">
+                  <i class="devicon-laravel-original colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Wordpress">
+                  <i class="devicon-wordpress-plain"></i>
+                </li>
+                <li class="tooltip" tooltip="Flutter">
+                  <i class="devicon-flutter-plain colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Android">
+                  <i class="devicon-android-plain colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Firebase">
+                  <i class="devicon-firebase-plain"></i>
+                </li>
+                <li class="tooltip" tooltip="Appwrite">
+                  <i class="devicon-appwrite-plain"></i>
+                </li>
+                <li class="tooltip" tooltip="AWS">
+                  <i class="devicon-amazonwebservices-plain-wordmark"></i>
+                </li>
+                <li class="tooltip" tooltip="MySQL">
+                  <i class="devicon-mysql-original"></i>
+                </li>
+                <li class="tooltip" tooltip="MongoDB">
+                  <i class="devicon-mongodb-plain colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Git">
+                  <i class="devicon-git-plain colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Github">
+                  <i class="devicon-github-original colored"></i>
+                </li>
+                <li class="tooltip" tooltip="Docker">
+                  <i class="devicon-docker-plain"></i>
+                </li>
+              </ul>
+            </article>
+            <div class="img-wrapper mt-2">
+              <img src="/assets/images/skills.svg" />
+            </div>
+          </div>
         </div>
-        <div class="skills-wrapper">
-          <article>
-            <h4 class="article-title">My Skills</h4>
-            <ul class="skills">
-              <li class="tooltip" tooltip="Java">
-                <i class="devicon-java-plain-wordmark colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Kotlin">
-                <i class="devicon-kotlin-plain colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Javascript">
-                <i class="devicon-javascript-plain colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Typescript">
-                <i class="devicon-typescript-plain colored"></i>
-              </li>
-              <li class="tooltip" tooltip="php">
-                <i class="devicon-php-plain colored"></i>
-              </li>
-              <li class="tooltip" tooltip="HTML">
-                <i class="devicon-html5-plain-wordmark colored"></i>
-              </li>
-              <li class="tooltip" tooltip="CSS">
-                <i class="devicon-css3-plain-wordmark colored"></i>
-              </li>
-              <li class="tooltip" tooltip="TailwindCSS">
-                <i class="devicon-tailwindcss-original colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Angular">
-                <i class="devicon-angular-plain colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Vue.js">
-                <i class="devicon-vuejs-plain colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Node.js">
-                <i class="devicon-nodejs-plain-wordmark colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Nest.js">
-                <i class="devicon-nestjs-original colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Socket.io">
-                <i class="devicon-socketio-original"></i>
-              </li>
-              <li class="tooltip" tooltip="Laravel">
-                <i class="devicon-laravel-original colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Wordpress">
-                <i class="devicon-wordpress-plain"></i>
-              </li>
-              <li class="tooltip" tooltip="Flutter">
-                <i class="devicon-flutter-plain colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Android">
-                <i class="devicon-android-plain colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Firebase">
-                <i class="devicon-firebase-plain"></i>
-              </li>
-              <li class="tooltip" tooltip="Appwrite">
-                <i class="devicon-appwrite-plain"></i>
-              </li>
-              <li class="tooltip" tooltip="MySQL">
-                <i class="devicon-mysql-original"></i>
-              </li>
-              <li class="tooltip" tooltip="MongoDB">
-                <i class="devicon-mongodb-plain colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Git">
-                <i class="devicon-git-plain colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Github">
-                <i class="devicon-github-original colored"></i>
-              </li>
-              <li class="tooltip" tooltip="Docker">
-                <i class="devicon-docker-plain"></i>
+      </section>
+      <!-- About Section: End -->
+
+      <!-- Projects Section: Start -->
+      <section id="projects">
+        <h3 class="section-title">Projects</h3>
+        <div class="container cards-wrapper"></div>
+        <p class="stay-tunned">
+          I still have projects that I will add later, so please stay tuned.
+        </p>
+      </section>
+      <!-- Projects Section: End -->
+
+      <!-- Project Details: Start -->
+
+      <div class="project-details">
+        <div class="overlay"></div>
+        <div class="container"></div>
+      </div>
+
+      <!-- Project Details: End -->
+
+      <!-- Contact Section: Start -->
+
+      <section id="contact">
+        <h3 class="section-title text-white">Contact</h3>
+        <div class="container contact-wrapper">
+          <div>
+            <h4>Drop me a message</h4>
+            <p>
+              Feel free to reach out for any inquiries, collaborations, or just
+              to say hello. I'm always excited to connect with like-minded
+              individuals and discuss new opportunities. Looking forward to
+              hearing from you!
+            </p>
+            <ul>
+              <li>
+                <div class="icon-wrapper">
+                  <img src="/assets/images/icons/mail.svg" />
+                </div>
+                saad@aboulhoda.me
               </li>
             </ul>
-          </article>
-          <div class="img-wrapper mt-2">
-            <img src="/assets/images/skills.svg" />
           </div>
-        </div>
-      </div>
-    </section>
-    <!-- About Section: End -->
-
-    <!-- Projects Section: Start -->
-    <section id="projects">
-      <h3 class="section-title">Projects</h3>
-      <div class="container cards-wrapper">
-        <div class="card">
-          <div class="card-img">
-            <img src="/assets/images/projects/ABOULHODA.png" />
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">ABOULHODA</h4>
-            <div class="card-description line line-clamp-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Architecto illo tenetur commodi hic odio qui voluptatum minima,
-              aliquid nulla quidem. Eius illum non natus pariatur. Provident
-              molestias voluptatum quo ratione.
-            </div>
-            <div class="badges-wrapper">
-              <div class="badge">HTML</div>
-              <div class="badge">CSS</div>
-              <div class="badge">JavaScript</div>
-              <div class="badge">2025</div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img src="/assets/images/projects/Doros Online.png" />
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">Doros Online</h4>
-            <div class="card-description line line-clamp-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Architecto illo tenetur commodi hic odio qui voluptatum minima,
-              aliquid nulla quidem. Eius illum non natus pariatur. Provident
-              molestias voluptatum quo ratione.
-            </div>
-            <div class="badges-wrapper">
-              <div class="badge">HTML</div>
-              <div class="badge">CSS</div>
-              <div class="badge">Bootstrap</div>
-              <div class="badge">Wordpress</div>
-              <div class="badge">Themosis</div>
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-img">
-            <img src="/assets/images/projects/Nexus.jpg" />
-          </div>
-          <div class="card-body">
-            <h4 class="card-title">Nexus</h4>
-            <div class="card-description line line-clamp-2">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Architecto illo tenetur commodi hic odio qui voluptatum minima,
-              aliquid nulla quidem. Eius illum non natus pariatur. Provident
-              molestias voluptatum quo ratione.
-            </div>
-            <div class="badges-wrapper">
-              <div class="badge">Angular</div>
-              <div class="badge">Node.js</div>
-              <div class="badge">Nest.js</div>
-              <div class="badge">Appwrite</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Projects Section: End -->
-
-    <!-- Contact Section: Start -->
-
-    <section id="contact">
-      <h3 class="section-title text-white">Contact</h3>
-      <div class="container contact-wrapper">
-        <div>
-          <h4>Drop me a message</h4>
-          <p>
-            Feel free to reach out for any inquiries, collaborations, or just
-            to say hello. I'm always excited to connect with like-minded
-            individuals and discuss new opportunities. Looking forward to
-            hearing from you!
-          </p>
-          <ul>
-            <li>
-              <div class="icon-wrapper">
-                <img src="/assets/images/icons/mail.svg" />
+          <div>
+            <form
+              id="contact-form"
+              method="POST"
+              action="https://formspree.io/f/xrbeqggq"
+            >
+              <div class="input-wrapper">
+                <label for="name" class="input-label">Full name *</label>
+                <input
+                  class="input-control"
+                  type="text"
+                  id="name"
+                  name="name"
+                />
               </div>
-              saad@aboulhoda.me
-            </li>
-          </ul>
+              <div class="input-wrapper">
+                <label for="email" class="input-label">Email *</label>
+                <input
+                  class="input-control"
+                  type="email"
+                  id="email"
+                  name="email"
+                />
+              </div>
+              <div class="input-wrapper">
+                <label for="subject" class="input-label">Subject *</label>
+                <input class="input-control" id="subject" name="subject" />
+              </div>
+              <div class="input-wrapper">
+                <label for="message" class="input-label">Message *</label>
+                <textarea
+                  rows="6"
+                  class="input-control"
+                  id="message"
+                  name="message"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary w-full">
+                Submit
+              </button>
+              <p class="note">
+                The form will reset after a successful submission.
+              </p>
+            </form>
+          </div>
         </div>
-        <div>
-          <form id="contact-form" method="POST" action="https://formspree.io/f/xrbeqggq">
-            <div class="input-wrapper">
-              <label for="name" class="input-label">Full name *</label>
-              <input class="input-control" type="text" id="name" name="name" />
-            </div>
-            <div class="input-wrapper">
-              <label for="email" class="input-label">Email *</label>
-              <input class="input-control" type="email" id="email" name="email" />
-            </div>
-            <div class="input-wrapper">
-              <label for="subject" class="input-label">Subject *</label>
-              <input class="input-control" id="subject" name="subject" />
-            </div>
-            <div class="input-wrapper">
-              <label for="message" class="input-label">Message *</label>
-              <textarea rows="6" class="input-control" id="message" name="message"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary w-full">Submit</button>
-            <p class="note">The form will reset after a successful submission.</p>
-          </form>
+      </section>
+      <!-- Contact Section: End -->
+    </main>
+
+    <!-- Footer: Start -->
+
+    <footer>
+      <div class="separator"></div>
+      <div class="container">
+        <h2>ABOULHODA</h2>
+        <p>2025 - Aboulhoda, All right reserved</p>
+        <div class="flex">
+          <p>
+            <a
+              class="icon-wrapper"
+              target="_blank"
+              href="https://github.com/n1akai"
+              ><img src="/assets/images/icons/github.svg"
+            /></a>
+          </p>
+          <p>
+            <a
+              class="icon-wrapper"
+              target="_blank"
+              href="https://linkedin.com/in/saad-aboulhoda"
+              ><img src="/assets/images/icons/linkedin.svg"
+            /></a>
+          </p>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- Contact Section: End -->
-  </main>
+    <!-- Footer: End -->
 
-  <!-- Footer: Start -->
+    <!-- Messages: Start -->
 
-  <footer>
-    <div class="separator"></div>
-    <div class="container">
-      <h2>ABOULHODA</h2>
-      <p>2025 - Aboulhoda, All right reserved</p>
-      <div class="flex">
-        <p><a class="icon-wrapper" target="_blank" href="https://github.com/n1akai"><img
-              src="/assets/images/icons/github.svg" /></a>
-        </p>
-        <p><a class="icon-wrapper" target="_blank" href="https://linkedin.com/in/saad-aboulhoda"><img
-              src="/assets/images/icons/linkedin.svg" /></a></p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Footer: End -->
-
-  <!-- Messages: Start -->
-
-  <div id="messagesContainer"></div>
-  <!-- Messages: End -->
-</body>
-
+    <div id="messagesContainer"></div>
+    <!-- Messages: End -->
+  </body>
 </html>
