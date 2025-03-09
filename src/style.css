@@ -42,6 +42,12 @@
   --rounded-md: 6px;
   --rounded-full: 999px;
   --icon-background: linear-gradient(#e83538, #bf292c);
+
+  --bg-small: 576px;
+  --bg-medium: 768px;
+  --bg-large: 922px;
+  --bg-extra-large: 1200px;
+  --bg-extra-large-large: 1400px;
 }
 
 /* Variables: End */
@@ -78,7 +84,7 @@ a {
 }
 
 /* Small */
-@media (min-width: var(--bp-small)) {
+@media (min-width: 576px) {
   .container {
     width: 510px;
   }
@@ -92,21 +98,21 @@ a {
 }
 
 /* Large */
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .container {
     width: 850px;
   }
 }
 
 /* Extra large */
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .container {
     width: 1100px;
   }
 }
 
 /* Extra extra large */
-@media (min-width: 1536px) {
+@media (min-width: 1400px) {
   .container {
     width: 1350px;
   }
@@ -174,7 +180,7 @@ section {
 section .section-title {
   font-family: var(--sirin-stencil-font);
   text-transform: uppercase;
-  font-size: 56px;
+  font-size: 46px;
   text-align: center;
   font-weight: 400;
   margin-bottom: 26px;
@@ -184,7 +190,7 @@ section .section-title {
 article .article-title {
   text-transform: uppercase;
   position: relative;
-  font-size: 28px;
+  font-size: 23px;
   font-weight: 600;
   padding-left: 18px;
   color: var(--text-primary-color-inverse);
@@ -311,6 +317,19 @@ header h1 {
   color: var(--primary);
   font-family: var(--sirin-stencil-font);
   font-weight: 400;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
 }
 
 header nav#menu {
@@ -519,6 +538,7 @@ section#about .about-wrapper {
   display: grid;
   gap: 24px;
   margin-bottom: 16px;
+  align-items: center;
 }
 
 section#about .img-wrapper {
@@ -553,6 +573,7 @@ section#about article {
 section#about .skills-wrapper {
   display: grid;
   gap: 24px;
+  align-items: center;
 }
 
 section#about .skills-wrapper .skills {
@@ -565,14 +586,26 @@ section#about .skills-wrapper .skills {
 }
 
 section#about .skills-wrapper .skills li i {
-  font-size: 72px;
+  font-size: 52px;
   color: #ddd;
+}
+
+@media (min-width: 769px) {
+  section#about .skills-wrapper .skills li i {
+    font-size: 65px;
+  }
+}
+
+@media (min-width: 1400px) {
+  section#about .skills-wrapper .skills li i {
+    font-size: 72px;
+  }
 }
 
 section#about .skills-wrapper .skills li {
   display: flex;
   justify-content: center;
-  flex-grow: 1;
+  align-items: center;
 }
 
 /* section#about img {
@@ -605,13 +638,15 @@ section#projects .cards-wrapper {
   gap: 24px;
 }
 
-section#projects .cards-wrapper .card {
-  margin-bottom: 20px;
-}
-
 @media (min-width: 768px) {
   section#projects .cards-wrapper .card {
     width: calc(50% - 12px);
+  }
+}
+
+@media (min-width: 1200px) {
+  section#projects .cards-wrapper .card {
+    width: calc(33% - 14px);
   }
 }
 
@@ -690,9 +725,14 @@ section#contact .contact-wrapper form {
   border-radius: 8px;
   padding: 16px;
   display: block;
-  max-width: 450px;
   width: 100%;
   margin: auto;
+}
+
+@media (min-width: 768px) {
+  section#contact .contact-wrapper form {
+    max-width: 450px;
+  }
 }
 
 section#contact .contact-wrapper form .input-wrapper {
@@ -739,7 +779,7 @@ footer {
 footer .container {
   padding: 2rem 1rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   row-gap: 12px;
   align-items: center;
@@ -748,6 +788,7 @@ footer .container {
 @media (min-width: 768px) {
   footer .container {
     justify-content: space-between;
+    flex-direction: row;
     row-gap: 0;
   }
 }
@@ -755,12 +796,25 @@ footer .container {
 footer .container h2 {
   font-family: var(--sirin-stencil-font);
   font-weight: 500;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 576px) {
+  footer .container h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  footer .container h2 {
+    font-size: 2rem;
+  }
 }
 
 footer .container > p {
   text-transform: uppercase;
   font-weight: 500;
+  text-align: center;
 }
 
 /* Footer: End */
@@ -885,8 +939,14 @@ div#messagesContainer .message.slide-out {
   transform: translateY(-100%);
   height: 100%;
   padding-top: 72px;
-  padding-bottom: 72px;
+  padding-bottom: 10px;
   transition: 0.15s;
+}
+
+@media (min-width: 768px) {
+  .project-details .container {
+    padding-bottom: 72px;
+  }
 }
 
 .project-details.active .container {
@@ -1120,6 +1180,7 @@ div#messagesContainer .message.slide-out {
 #projects p.stay-tunned {
   color: rgba(0, 0, 0, 0.6);
   text-align: center;
+  margin-top: 20px;
 }
 
 /* Project Details: End */
