@@ -34,7 +34,7 @@ export const projects = [
     shortTitle: "Doros Online",
     description:
       "The goal of this project was to create a simple and clean WordPress theme within a short timeframe. I aimed to make it easily understandable for those unfamiliar with WordPress theme development. To achieve this, I structured it similarly to Laravel and built it using the Themosis Framework.",
-    date: "Doros Online | Dec 2024",
+    date: "CMS | Dec 2024",
     imgs: [
       "/assets/images/projects/doros/Home - P1.webp",
       "/assets/images/projects/doros/Home - P2.webp",
@@ -94,7 +94,7 @@ export const projects = [
     shortTitle: "Sales Management System",
     description:
       "In this project, I upgraded a Sales Management System from Laravel 5.6 to Laravel 11, ensuring compatibility with the latest features and security updates. I added full Arabic translation, redesigned the user interface for improved usability, and optimized the database by adding and modifying tables. I also integrated sales statistics to provide real-time insights, improving decision-making.<br><br>This work focused on enhancing performance, user experience, and functionality while keeping the system up to date with modern Laravel standards.",
-    date: "EduSync Student | Nov 2024",
+    date: "SMS Dashboard | Nov 2024",
     imgs: [
       "/assets/images/projects/sms/sales-management-system.webp",
       "/assets/images/projects/sms/1.webp",
@@ -141,7 +141,7 @@ export const projects = [
     shortTitle: "EduSync Student",
     description:
       "During my first internship, I developed this application to enhance communication between teachers and students. The app allows teachers to share test results directly with students through their mobile devices. Additionally, students can check for assigned homework, upcoming online tests, and—if the school is private—whether their tuition for the month has been paid. The app also lets students see if they have been marked as absent.<br><br>All data is stored on a separate server built with PHP and MySQL.",
-    date: "EduSync Student | Mar 2024 - Apr 2024",
+    date: "Student Mobile Application | Mar 2024 - Apr 2024",
     imgs: [
       "/assets/images/projects/edusync/EduSybc Student.webp",
       "/assets/images/projects/edusync/1.webp",
@@ -170,7 +170,7 @@ export const projects = [
   {
     title: "Games Store - Admin Dashboard",
     shortTitle: "Games Store",
-    date: "Games Store | Dev 2023",
+    date: "Mobile App Web Dashboard | Dev 2023",
     description:
       "This project is designed to manage the data of a mobile application called Games Store. I built it using Vue.js, the first JavaScript framework I learned back in 2023. For state management, I used Pinia, and I incorporated Vuetify components to maintain visual consistency with the mobile app",
     imgs: [
@@ -204,7 +204,7 @@ export const projects = [
     shortTitle: "Games Store",
     description:
       "This mobile application was built using the Android SDK, allowing players to purchase their favorite games effortlessly. It features a clean and simple UI, ensuring a seamless user experience.",
-    date: "Game Store | Dec 2023",
+    date: "Game Store Mobile App | Dec 2023",
     imgs: [
       "/assets/images/projects/games-store-android/Games Store - Mobile.webp",
       "/assets/images/projects/games-store-android/1.webp",

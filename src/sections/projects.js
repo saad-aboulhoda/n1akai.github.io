@@ -1,6 +1,7 @@
 import { select, selectAll } from "../utils.js";
 import { projects as data } from "../data/projects.js";
 import { createObservable } from "../functions/createObservable.js";
+import { preloadImages } from "../functions/preloadImages.js";
 
 export function projects() {
   select("#projects .cards-wrapper").innerHTML = renderProjects(data);
@@ -14,6 +15,10 @@ export function projects() {
         (element) => element.moreDetailsTarget === targetId
       );
       select(".project-details .container").innerHTML = renderDetails(project);
+      /**
+       * Preload Images
+       */
+      const images = preloadImages(project.imgs);
       /**
        * Show details
        */
@@ -67,7 +72,7 @@ export function projects() {
           image.removeEventListener("load", onLoadedImage);
         };
 
-        image.src = project.imgs[index];
+        image.src = images[index].src;
 
         startImageLoading();
 
