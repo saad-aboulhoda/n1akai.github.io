@@ -25,7 +25,7 @@ export const projects = [
       {
         icon: "fa-brands fa-github",
         text: "Github",
-        link: "https://github.com/saad-aboulhoda/n1akai.github.io",
+        link: "https://github.com/saad-aboulhoda/aboulhoda",
       },
     ],
   },

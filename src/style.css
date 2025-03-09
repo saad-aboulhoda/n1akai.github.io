@@ -433,7 +433,7 @@ header nav a:hover {
 /* Hero Section: Start */
 
 section#hero {
-  background-image: url("../images/hero-section-background.webp");
+  background-image: url("./images/hero-section-background.webp");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;

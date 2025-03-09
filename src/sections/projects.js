@@ -27,22 +27,53 @@ export function projects() {
 
       const imageObservable = createObservable();
       const unsubscribeImage = imageObservable.subscribe((index) => {
-        select(".images-wrapper .loading").classList.add("active");
+        const startImageLoading = () => {
+          select(".images-wrapper .loading").classList.add("active");
+        };
 
-        const handleLoading = () => {
-          // Remove active from all dots
+        const stopImageLoading = () => {
+          select(".images-wrapper .loading").classList.remove("active");
+        };
+
+        const removeActiveFromDot = () => {
           selectAll("#dots span").forEach((element) =>
             element.classList.remove("active")
           );
-          // then
-          select(`#dot-${currentIndex}`).classList.add("active");
-          select(".images-wrapper .loading").classList.remove("active");
-          image.removeEventListener("load", handleLoading);
+        };
+
+        const addActiveToDot = (index) => {
+          select(`#dot-${index}`).classList.add("active");
+        };
+
+        const blockNavigatingBetweenImages = () => {
+          select("#slider-prev").style.pointerEvents = "none";
+          select("#slider-next").style.pointerEvents = "none";
+        };
+
+        const unBlockNavigatingBetweenImages = () => {
+          select("#slider-prev").style.pointerEvents = "auto";
+          select("#slider-next").style.pointerEvents = "auto";
+        };
+
+        const onLoadedImage = () => {
+          removeActiveFromDot();
+
+          addActiveToDot(currentIndex);
+
+          stopImageLoading();
+
+          unBlockNavigatingBetweenImages();
+
+          image.removeEventListener("load", onLoadedImage);
         };
 
         image.src = project.imgs[index];
 
-        image.addEventListener("load", handleLoading);
+        startImageLoading();
+
+        blockNavigatingBetweenImages();
+
+        image.addEventListener("load", onLoadedImage);
       });
 
       select("#slider-prev").addEventListener("click", () => {

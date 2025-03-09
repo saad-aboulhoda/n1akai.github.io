@@ -1,5 +1,0 @@
-  --bp-small: 576px;
-  --bp-medium: 768px;
-  --bp-large: 1280px;
-  --bp-extra-large: 1280px;
-  --bp-extra-extra-large: 1536px;
